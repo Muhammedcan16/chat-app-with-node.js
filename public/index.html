@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Uygulamasi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js" integrity="sha512-YeeA/Qxn5hYdkukScTCNNOhTrv1C2RubAGButJ1rmgQwZf/HdRaCGl+JAVkqsqaNRaYNHdheiuKKuPf9mDcqKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--
+https://cdnjs.com/libraries/socket.io
+Sitesi üzerinden kütüphaneyi çağırdım ve script kodlarının içine yazarak projeye entegre ettim(sitede kod yazma için uyumlu kopyala seçeneği ile kopyalşa yapıştır yapabilirisiz)
+-->
+<!--Her bir browser üzerinden her bir kullanıcı sayfaya girince socked işlemi başlatabileceğiz
+ve server ile bağlantımızı gerçekleştirebileceğiz-->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="chat-wrap">
+    <h2>Chat Uygulamasi</h2>
+    <div id="chat-window">
+        <!--her kullanıcının gönderdiği mesaj bu div içinde yer alacak-->
+        <div id="output"></div>
+        <div id="feedback"></div>
+    </div>
+    <input type="text" id="sender" placeholder="ad">
+    <input type="text" id="message" placeholder="mesaj">
+    <button id="submitBtn">Gonder</button>
+</div>
+  <script src="chat.js"></script>  
+  <!--buradan sitede olan tüm etkileşimleri alacağız bu alınan bilgileri socket.io sayesinde server a ileteceğiz
+ordan işleyip bütün kullanıcılarda aynı mesajların görülmesini sağlayacağız-->
+</body>
+</html>
